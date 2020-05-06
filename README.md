@@ -3,3 +3,5 @@
 npm install express  
 npm install ejs  
 npm install mysql  
+## Run server  
+node app
