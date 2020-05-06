@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Edit Page</title>
+</head>
+<body>
+  <h1>Edit user table</h1>
+  <form action="/user_edit/<%=data.id%>" method="post">
+      <table>
+        <tr>
+          <td><input type="text" name="id" value="<%= data.id %>" disabled /></td>
+        </tr>
+        <tr>
+          <td><input type="text" name="pw" value="<%= data.pw %>" /></td>
+        </tr>
+        <tr>
+          <td><input type="text" name="position" value="<%= data.position %>" /></td>
+        </tr>
+      </table>
+      <input type="submit" value="submit"/>
+  </form>
+  <a href="/user_table">back table page</a>
+</body>
+</html>

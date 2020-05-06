@@ -1,0 +1,32 @@
+<!doctype html>
+<head>
+	<title>Search Page</title>
+    <style>
+		table,td,th{
+			border: 1px solid black
+		}
+		table{
+			width:60%;
+			height: 100px;
+			margin:auto;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<h1>Searched Table</h1>
+	<table width="100%", border="1">
+	<tr>
+	<th>ID</th>
+	<th>NAME</th>
+	</tr>
+    <% data.forEach(function (table, index) { %>
+	<tr>
+    <td><%= table.id %></td>
+	<td><%= table.name %></td>
+	</tr>
+	<% }); %>
+	</table>
+	<a href="/">back main</a>
+</body>
+</html>

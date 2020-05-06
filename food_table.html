@@ -1,0 +1,46 @@
+<!doctype html>
+<head>
+	<title>Food table</title>
+    <style>	
+		table,th,td{
+			border-collapse:collapse;
+			border: 1px solid black
+		}
+		table{
+			width:60%;
+			height: 150px;
+			margin:auto;
+			text-align: center;
+		}
+		caption{
+			font-size:30px;
+			font-weight:bold;
+		}
+		a:link{text-decoration:none;}
+		a:visited{text-decoration:none;}
+		a:hover{text-decoration:underline;}
+	</style>
+</head>
+<body>
+	<table>
+	<caption>Food table</caption>
+	<tr><td colspan="7" style="text-align:left"><a href="/food_insert">insert new data into food table</a></td></tr>
+	<tr>
+	<th>DELETE</th>
+	<th>EDIT</th>
+	<th>FOOD</th>
+	<th>SICK</th>	
+	</tr>
+    <% data.forEach(function (table, index) { %>
+	<tr>
+	<td><a href="/food_delete/<%= table.food %>">DELETE</a></td>
+    <td><a href="/food_edit/<%= table.food %>">EDIT</a></td>
+    <td><%= table.food %></td>
+	<td><%= table.sick %></td>
+	</tr>
+	<% }); %>
+	</table>
+	
+	<a href="/admin">back admin</a>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<head>
+	<title>Searched Patient Page</title>
+    <style>		
+		table,th,td{
+			border-collapse:collapse;
+			border: 1px solid black
+		}
+		table{
+			width:60%;
+			height: 150px;
+			margin:auto;
+			text-align: center;
+		}
+		caption{
+			font-size:30px;
+			font-weight:bold;
+		}
+		a:link{text-decoration:none;}
+		a:visited{text-decoration:none;}
+		a:hover{text-decoration:underline;}
+
+	</style>
+</head>
+<body>
+	<h1>Searched result</h1>
+	
+	<table width="100%", border="1">
+	<tr>
+	<th>NAME</th>
+	<th>Last doctor meeting</th>
+	<th>Disease</th>
+	<th>my doctor</th>
+	
+	</tr>
+    <% data.forEach(function (table, index) { %>
+	<tr>
+	<td><%= table.name %></td>
+	<td><%= table.date %></td>
+	<td><%= table.sick %></td>
+	<td><%= table.doctor %></td>
+	</tr>
+	<% }); %>
+	</table>
+	
+	<a href="/">back main</a>
+</body>
+</html>

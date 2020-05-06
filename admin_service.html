@@ -1,0 +1,26 @@
+<!doctype html>
+<head>
+	<title>Admin page</title>
+	<style>
+		body{
+			text-align:center;
+			position:absolute;
+			top:50%;
+			left:50%;
+			transform: translate(-50%,-50%)
+		}
+	</style>
+</head>
+<body>
+	<h1>Admin page</h1>
+	<table>
+	<tr>
+	<th><form action="/patient_table"><input type="submit" value="See patient table"/></form></th>
+	<th><form action="/doctor_table"><input type="submit" value="See doctor table"/></form></th>
+	<th><form action="/user_table"><input type="submit" value="See user table"/></form></th>
+	<th><form action="/food_table"><input type="submit" value="See food table"/></form></th>
+	</tr>
+	</table>
+	<a href="/login">log out</a>
+</body>
+</html>

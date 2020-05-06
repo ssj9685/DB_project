@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Food Edit Page</title>
+</head>
+<body>
+  <h1>Food Edit Page</h1>
+  <form action="/food_edit/<%=data.food%>" method="post">
+      <table>
+        <tr>
+          <td><input type="text" name="food" value="<%= data.food %>" disabled /></td>
+        </tr>
+        <tr>
+          <td><input type="text" name="sick" value="<%= data.sick %>" /></td>
+        </tr>
+      </table>
+      <input type="submit" value="submit"/>
+  </form>
+  <a href="/food_table">back table page</a>
+</body>
+</html>

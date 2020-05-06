@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Patient Edit Page</title>
+</head>
+<body>
+  <h1>Patient edit page</h1>
+  <form action="/patient_edit/<%=data.id%>" method="post">
+      <table>
+        <tr>
+          <td><input type="text" name="id" value="<%= data.id %>" disabled /></td>
+        </tr>
+        <tr>
+          <td><input type="text" name="name" value="<%= data.name %>" /></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" name="date" value="<%= data.date %>" />
+          </td>
+        </tr>
+        <tr>
+          <td><input type="text" name="sick" value="<%= data.sick %>" /></td>
+        </tr>
+		<tr>
+			<td><input type="text" name="doctor" value="<%= data.doctor %>" /></td>
+		</tr>
+      </table>
+      <input type="submit" value="submit"/>
+  </form>
+  <a href="/patient_table">back table page</a>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<head>
+	<title>Patient table Page</title>
+    <style>
+		table,th,td{
+			border-collapse:collapse;
+			border: 1px solid black
+		}
+		table{
+			width:60%;
+			height: 150px;
+			margin:auto;
+			text-align: center;
+		}
+		caption{
+			font-size:30px;
+			font-weight:bold;
+		}
+		a:link{text-decoration:none;}
+		a:visited{text-decoration:none;}
+		a:hover{text-decoration:underline;}
+	</style>
+</head>
+<body>
+	<table>
+	<caption>patient table</caption>
+	<tr><td colspan="7" style="text-align:left"><a href="/patient_insert">insert patient into table</a></td></tr>
+	<tr>
+	<th>DELETE</th>
+	<th>EDIT</th>
+	<th>ID</th>
+	<th>NAME</th>
+	<th>Last doctor meeting</th>
+	<th>Disease</th>
+	<th>my doctor</th>
+	</tr>
+    <% data.forEach(function (table, index) { %>
+	<tr>
+	<td><a href="/patient_delete/<%= table.id %>">DELETE</a></td>
+    <td><a href="/patient_edit/<%= table.id %>">EDIT</a></td>
+    <td><%= table.id %></td>
+	<td><%= table.name %></td>
+	<td><%= table.date %></td>
+	<td><%= table.sick %></td>
+	<td><%= table.doctor %></td>
+	</tr>
+	<% }); %>
+	</table>
+	
+	<a href="/admin">back admin</a>
+</body>
+</html>
